@@ -1,0 +1,109 @@
+<!-- CREATE -->
+<div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create new Task</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="form-label">Description</label>
+                    <input type="text" placeholder="Fazer atividade X" class="form-control backgroud-color-form"
+                        name="description" [(ngModel)]="task.description">
+
+                    <select class="form-select backgroud-color-form" name="category" [(ngModel)]="task.category">
+                        <option selected>Category</option>
+                        <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+                    </select>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-create-task" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-create-task" (click)="createTask()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UPDATE -->
+<div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Task</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="form-label">Description</label>
+                    <input type="text" placeholder="Fazer atividade X" class="form-control backgroud-color-form"
+                        name="description" [(ngModel)]="task.description">
+
+                    <select class="form-select backgroud-color-form" name="category" [(ngModel)]="task.category">
+                        <option selected>Category</option>
+                        <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+                    </select>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-create-task" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-create-task" (click)="updateTask()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="images-background">
+    <img class="image-background1" src="../../../../assets/cherry tree-pana.svg" alt="">
+    <img class="image-background2" src="../../../../assets/cherry blossom-pana.svg" alt="">
+</div>
+<!-- QUANDO CLICAR NA TD ABRIR UM POPUP COM OS DETALHES DA TAREFA -->
+<table class="table">
+    <button type="button" class="btn btn-create-task" data-bs-toggle="modal" data-bs-target="#modalCreate">
+        Create new task
+    </button>
+    <tbody>
+        <tr *ngFor="let t of tasks">
+            <td class="td-background">
+                <div class="div-check-description">
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" *ngIf="t.completed == true" type="checkbox" value="completed"
+                        id="flexCheckDefault" checked>
+                    <input class="form-check-input" *ngIf="t.completed == false" type="checkbox" value="completed"
+                        id="flexCheckDefault">
+                </div>
+            </td>
+            <td class="td-descriptiond">{{t.description}}</td>
+
+            </div>
+
+            </td>
+            <td class="td-background">{{t.category.name}} #</td>
+            <td class="td-background">
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+                            class="hamburger-image" src="../../../../assets/hamburger-dark.png" alt=""></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="btn dropdown-item" value="Update">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalUpdate">
+                                    Update
+                                </button>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" value="Delete" (click)="deleteTask">Delete</a></li>
+                        <li><a class="dropdown-item" value="AddComment" href="#">Add Comment</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <!-- <td><button class="btn btn-warning" value="Editar">Editar</button></td>
+            <td><button class="btn btn-danger" value="Excluir">Excluir</button></td> -->
+        </tr>
+    </tbody>
+</table>

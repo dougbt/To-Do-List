@@ -1,0 +1,191 @@
+/*  
+background-color: #d7d8f5;
+color: #2e4d90;
+nav: #7e8eda
+*/
+
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+tbody{
+    margin-top: 20px;
+}
+
+.td-background{
+    background-color: rgba(215, 216, 245, 0.8) ;
+    border-color: #fcfce2;
+    color: #2e4d90;
+    cursor: pointer;
+}
+tr:hover{
+    background-color: rgba(215, 216, 245, 0.9) ;
+
+}
+
+td .form-check{
+    background-color: rgba(215, 216, 245, 0) ;
+
+}
+
+.div-check-description {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+}
+
+.btn {
+    /* .dropdown-toggle{ */
+    background-color: #d7d8f5 !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu {
+    background-color: #ebecfa;
+    color: #c5dfe0;
+}
+
+.dropdown-item {
+    color: #2e4d90;
+}
+
+.hamburger-image {
+    width: 25px;
+}
+
+.form-check-input:checked {
+    background-color: #2e4d90;
+    border: none;
+}
+
+.btn-create-task{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: #2e4d90 !important;
+    color: #ebecfa;
+
+}
+
+.modal-content{
+/*     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: #d7d8f5;
+}
+
+form{
+    margin: 30px auto;
+    text-align: center;
+}
+
+label{
+    display: block;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+option{
+    border: none;
+}
+
+.backgroud-color-form{
+    background-color: #ebf0ff;
+    color: #2e4d90;
+}
+.backgroud-color-form::placeholder{
+    color: #2e4d90;
+}
+
+.images-background{
+    position: relative;
+    width: 100vw;
+}
+.image-background1{
+    position: absolute;
+    height: 90vh;
+    margin-left: 0px;
+    z-index: -1;
+}
+.image-background2{
+    position: absolute;
+    height: 50vh;
+    right: 0px; 
+    z-index: -1;
+}
+
+.alert{
+    width: 50%;
+    margin: 30px auto 0px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* img{
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+form{
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+label{
+    display: block;
+}
+ 
+input{
+    margin-bottom: 10px;
+}
+
+input[type="button"]{
+    margin: 10px;
+}
+
+table{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.div-check-description{
+    display: flex;
+    align-items: center;
+    width: 70vw;
+} */

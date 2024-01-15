@@ -1,0 +1,21 @@
+
+
+<div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+    <div *ngFor="let c of categories" class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          {{c.name}}
+        </button>
+      </h2>
+      <div *ngFor="let t of tasks" id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+          <div  class="accordion-body">
+            {{t.description}}
+          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+

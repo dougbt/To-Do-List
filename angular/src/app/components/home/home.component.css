@@ -1,0 +1,25 @@
+.animated {
+    display: flex;
+    margin: auto;
+    height: 80vh;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.home-paragraph {
+    margin-top: 20vh;
+   /*  margin-left: 10vh; */
+    text-align: center;
+    font-size: 1.5rem;
+    width: 40%;
+}
+
+.home-h1{
+    text-align: center;
+    margin-top: 5vh;
+}
